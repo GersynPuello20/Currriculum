@@ -1,2 +1,22 @@
 body {background-color: rgb(145, 126, 42);
 }
+
+img{ width: 200px;
+    height: 200px;
+
+}
+
+input{
+    border-radius: 5px;
+    border: 3px solid orange;
+    
+}
+
+.tipoinputs{
+    background-color: rgb(72, 141, 245);
+}
+
+#Nombrepersona{
+    height: 50px;
+
+}
