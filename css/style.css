@@ -1,22 +1,18 @@
-body {background-color: rgb(145, 126, 42);
+body {background:linear-gradient(#a67,#a94)
 }
 
-img{ width: 200px;
-    height: 200px;
+img{ width: 450px;
+    height: 450px;
 
 }
 
 input{
     border-radius: 5px;
-    border: 3px solid orange;
+    border: 3px solid rgb(63, 41, 0);
     
 }
 
-.tipoinputs{
-    background-color: rgb(72, 141, 245);
-}
-
-#Nombrepersona{
-    height: 50px;
+fieldset{border-radius: 20px;
+    border: 50px solid rgb( rgb(8, 4, 54)); 
 
 }
