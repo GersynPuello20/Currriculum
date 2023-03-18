@@ -3,21 +3,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>FORMULARIO PRINCIPAL</title>
 </head>
 <body>
-    <h1>!Hola, bienvenidos a formularios¡</h1>
+    <h1>!Hola, bienvenido a formulario de UFPSO¡</h1>
     <fieldset>
         <form action="">
-            <label for="NOMBRE COMPLETO"></label>
-            <input type="text">
+            <h3>Nombres y apellidos</h3>
+            <input type="text" placeholder="Escriba su nombre" id="Nombrepersona" class="tipoinputs" minlength="10" maxlength="30">
             <br>
-            <label for="DIRECCION"></label>
-            <input type="text">
+            <h3>Contraseña</h3>
+            <input type="password" placeholder="Escriba su contraseña" id="contraseña" class="tipoinputs" >
             <br>
-            <label for="OBSERVACION"></label>
-            <input type="text">
-
+            <h3>Escriba su codigo estudiantil</h3>
+            <input type="number" placeholder="Escriba su codigo" id="codigo" min="6" max="6">
+            <br>
+            <h3>Fecha de nacimiento</h3>
+            <input type="date" class="tipoinputs">
+            
+   
+            <br>
+            <br>
+            <h3>Seleccione su sexo</h3>
+            <label for="sexo"></label>
+            <br>
+            Masculino : <input type="radio" name="sexo" id="mas" value="H">
+            Femenino : <input type="radio" name="sexo" id="fem" value="M">
+            <br>
+            <br>
+            <h3>Correo electronico</h3>
+            <input type="email" placeholder="Escriba su correo" id="correo" class="tipoinputs">
+            <br>
+            <h3>Numero de telefono</h3>
+            <input type="tel" placeholder="Escriba su numero de telefono" maxlength="10" minlength="10">
+            <h3>Eliga su edad</h3>
+            <input type="number" placeholder="" name="" id="" min="16" max="50">
+            <br>
+            <h3>Buscar</h3>
+            <input type="search" name="" id="">
+            <br> <br>
+            <h3>Observaciones</h3>
+            <input type="text" placeholder="Observaciones" name="" id="" required>
+            <br>
+            <h3>Subir archivos</h3>
+            <input type="file">
+            <br>
+            <h3>Eliga un color</h3>
+            <input type="color">
+            <br>
+            <h3>Seleccione el cuadro</h3>
+            <input type="checkbox">
+            <br>
+            <br>
             <button>ENVIAR</button>
         </form>
     </fieldset>
