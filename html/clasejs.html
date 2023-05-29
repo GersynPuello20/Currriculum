@@ -8,6 +8,9 @@
 </head>
 <body>
     Hola bienvenido
+    <input type="text" id="valor" placeholder="Escriba un valor">
+    <button id="btn_enviar" onclick="calcular()" > ENVIAR </button>
+    <h1 id="titulo"></h1>
     <script>
         //VARIABLES
         const nameuno = "CUALQUIER COSA";
@@ -33,7 +36,45 @@
         let module = numb_b % num_a;
         let expo   = num_a ^ numb_b;
         resta = Math.round(resta);
-        console.log("suma " + suma);
+        console.log("Suma = " + suma + " \nResta = " + resta + "\nmultiplicacion = " + multi);
+        let concatenar = "suma".concat(suma);
+        console.log(concatenar);
+        // OPERADORES DE COMPARACION < / > / <> / >= / <= / = / == / ===
+        // OPERADORES LOGICOS : TERNARIO : ? / and && / or || / negacion, diferente, contrario: ! ;
+        var elvisLives = Math.PI > 4 ? "SIP" : "NOP";
+        console.log(elvisLives);
+        let operador = true;
+        console.log(operador);
+        // ESTRUCTURAS CONDICIONALES : IF / ELSE / ELSE IF 
+        let cantarray = arraynum.length;
+        if(cantarray>7){
+            console.log(cantarray);
+            console.log(arraynum[4]);
+            console.log(dias_semana[2]);
+            console.log(dias_semana);
+            console.log(users[2].name); 
+        }
+
+        for(let i = 0; i<dias_semana.length; i++){
+            console.log(dias_semana[i]);
+        }
+
+        let i = 0;
+        while(i<users.length){
+            console.log(user[i].name);
+            i++;
+        }
+
+        function calcular (){
+            let namevar = document.getElementById("valor").value;
+            namevar = namevar.toUpperCase();
+            document.getElementById("titulo").innerText = namevar;
+        }
+
+        document.getElementById("btn_enviar").addEventListener("click",function(){
+            document.getElementById("titulo").style.color = "gray";
+            document.getElementById("titulo").style.backgroundColor = "aqua";
+        })
     </script>
 </body>
 </html>
