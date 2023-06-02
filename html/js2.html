@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>CALCULADORA!</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        box-sizing: border-box;
+        }
+
+      body {
+        margin: 7px;
+        text-align: center;
+        background: rgb(50,41,214);
+        background: linear-gradient(90deg, rgba(50,41,214,1) 18%, rgba(0,212,255,1) 71%);      }
+      button {
+        padding: 7px;
+        margin: 7px;
+        width: 20%;
+        background-color: rgb(179, 122, 37);
+        color: rgb(0, 0, 0);
+      }
+      input {
+        width: 50%;
+        padding: 7px;
+        margin: 7px;
+        background-color: #fff;
+        color: rgb(0, 0, 0);
+      }
+      .container {
+        margin: 14px;
+        margin-top: 28px;
+        padding: 7px;
+      }
+
+      .container > div {
+        margin: 20px 0px;
+        
+      }
+
+      span {
+        color: black;
+        font-size: 25px;
+        
+        
+      }
+      h1 {
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        margin: 20px 0px 20px;
+      }
+      #btn_reset {
+        display: flex;
+        justify-content: center;
+        margin-left: 320px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CALCULADORA MATEMÁTICA</h1>
+    <form action="#" id="formul">
+    <input id="input" placeholder="Ingrese un numero" />
+    <button id="btn_reset">LIMPIAR</button>
+    </form>
+
+    <button id="btn">CALCULAR</button>
+
+    <div class="container">
+      <div>
+        <span>SUMA: </span>
+        <span id="sum"></span>
+      </div>
+      <div>
+        <span>RESTA: </span>
+        <span id="rest"></span>
+      </div>
+      <div>
+        <span>MULTIPLICACIÓN: </span>
+        <span id="mul"></span>
+      </div>
+      <div>
+        <span>DIVISIÓN: </span>
+        <span id="div"></span>
+      </div>
+      <div>
+        <span>PROMEDIO</span>
+        <span id="prom"></span>
+      </div>
+    </div>
+    <script>
+      let elem = {};
+      elem.input = document.querySelector("#input");
+      elem.btn = document.querySelector("#btn");
+      elem.sum = document.querySelector("#sum");
+      elem.rest = document.querySelector("#rest");
+      elem.mul = document.querySelector("#mul");
+      elem.div = document.querySelector("#div");
+      elem.prom = document.querySelector("#prom");
+
+      let calc = [];
+      let count = 0;
+
+      // Eventos
+      elem.btn.addEventListener("click", (e) => {
+        calc.push(Number(elem.input.value));
+
+        elem.sum.innerText = sum(calc);
+        elem.rest.innerText = rest(calc);
+        elem.mul.innerText = mul(calc);
+        elem.div.innerText = div(calc);
+        elem.prom.innerText = prom(calc);
+      });
+
+      // OPERACIONES
+      function sum(a) {
+        let result = 0;
+
+        for (let i of a) {
+          result += i;
+        }
+
+        return result;
+      }
+
+      function rest(a) {
+        let result = a[0];
+
+        for (let i of a.slice(1, a.lenght)) {
+          result -= i;
+        }
+
+        return result;
+      }
+
+      function mul(a) {
+        let result = 1;
+
+        for (let i of a) {
+          result *= i;
+        }
+
+        return result;
+      }
+
+      function div(a) {
+        let result = a[0];
+
+        for (let i of a.slice(1, a.lenght)) {
+          result = result / i;
+        }
+
+        return result;
+      }
+
+      function prom(a) {
+        let result = a[0];
+
+        for (let i of a.slice(1, a.lenght)) {
+          result = result + a[0] / i;
+        }
+        return result;
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        let formulario = document.getElementById("formul");
+        formulario.addEventListener("submit", function () {
+          formulario.reset();
+        });
+      });
+    </script>
+  </body>
+</html>
