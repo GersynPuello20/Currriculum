@@ -10,18 +10,34 @@
 
     <body>
         <input type="text" id="calcu" placeholder="Ingrese un valor" />
-        <button id="btn" onclick="calcul">CALCULAR</button>
+        <button id="btn" onclick="calcular()" >CALCULAR</button>
         <label for="" id="sum">suma</label>
         <label for="" id="rest">resta</label>
         <label for="" id="mul">multiplicacion</label>
 
         <script>
             
-            Function calcu (){
+            function calcular (){
                 let calcul  = document.getElementById("calcu").value;
-                if(isNaN(calcu))
-            }
+                 if(isNaN(calcul)== true) {
+                    alert("Ingrese un valor correspondiente ");
+                }
+                else{
+                    alert("Has ingresado un numero valido")
+                }
+                
+                }
+                document.getElementById("calcu").focus();
+                document.getElementById("calcu").value = "";
+                document.getElementById("calcu").style.border = "1px solid red";
            
+            function validar (){
+                let calcul  = document.getElementById("calcu").value;
+                if(calcul.lenght===0 || calcul.value===sign()){
+                    alert("Error");
+                }
+            }
+        
         </script>
 
     </body>
