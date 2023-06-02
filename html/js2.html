@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
     <title>CALCULADORA!</title>
     <style>
       * {
@@ -57,7 +56,7 @@
       #btn_reset {
         display: flex;
         justify-content: center;
-        margin-left: 320px;
+        margin-left: 760px;
       }
     </style>
   </head>
@@ -91,6 +90,10 @@
         <span>PROMEDIO</span>
         <span id="prom"></span>
       </div>
+      <div>
+        <span>HAS ALCANZADO 10 CARACTERES</span>
+        <span id="avis"></span>
+      </div>
     </div>
     <script>
       let elem = {};
@@ -101,6 +104,7 @@
       elem.mul = document.querySelector("#mul");
       elem.div = document.querySelector("#div");
       elem.prom = document.querySelector("#prom");
+      elem.aviso = document.querySelector("#avis")
 
       let calc = [];
       let count = 0;
@@ -114,9 +118,18 @@
         elem.mul.innerText = mul(calc);
         elem.div.innerText = div(calc);
         elem.prom.innerText = prom(calc);
+        ele.avis.innerText = avis(calc);
       });
 
       // OPERACIONES
+      
+      document.getElementById("btn").addEventListener("click", function(){
+        if ("input".length>=10){
+          document.getElementById("avis").style.color = "beige";
+          document.getElementById("avis").style.border = "black";
+        }
+      })
+
       function sum(a) {
         let result = 0;
 
