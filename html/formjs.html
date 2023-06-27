@@ -9,17 +9,57 @@
     <form action="" id="form">
         <h1>REGISTRO</h1>
         <div class="grupo">
-            <label for="">Name</label>
+            <label for="">Nombre</label>
             <input type="text"  id="name">
         </div>
         <div class="grupo">
-            <label for="">Password</label>
+            <label for="">Apellidos</label>
+            <input type="text"  id="apellidos">
+        </div>
+        <div class="grupo">
+            <label for="">contraseña</label>
             <input type="password"  id="password">
+        </div>
+        <div class="grupo">
+            <label for="">contraseña</label>
+            <input type="password"  id="password" placeholder="Repita su contraseña">
         </div>
         <div class="grupo">
             <label for="">Email</label>
             <input type="email"  id="email">
         </div>
+        <div class="grupo">
+            <label for="">Telefono</label>
+            <input type="text"  id="telefono">
+        </div>
+        <div class="grupo">
+            <label for="">Dirección</label>
+            <input type="text"  id="direccion">
+        </div>
+        <div class="grupo">
+            <label for="">Descripción</label>
+            <input type="text"  id="descripcion">
+        </div>
+        <div class="grupo">
+            <label for="" id="sexo">Sexo</label>
+            Masculino : <input type="radio" name="sexo" id="mas" value="H">
+            Femenino : <input type="radio" name="sexo" id="fem" value="M">
+        </div>
+        <div class="grupo">
+            <label for="">carrera</label>
+            <select name="carrera" id="">Seleccione una carrera</select>
+            <option value="sistemas">Ingeniería en sistemas</option>
+            <option value="civil">Ingeniería civil</option>
+            <option value="mecanica">Ingeniería mecanica</option>
+
+        </div>
+        <div class="grupo">
+            <label for="" id="acepto">Acepto condiciones</label>
+            Aceptar : <input type="radio" name="acepto" id="acep" value="A">
+            Femenino : <input type="radio" name="No acepto" id="acep" value="a">
+        </div>
+        <div></div>
+
         <button type="submit">ENVIAR</button>
         <p id="espacioinfo"></p>
     </form>
